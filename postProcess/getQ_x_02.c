@@ -18,9 +18,6 @@ int main(int a, char const *arguments[])
         }
         array[0][i] = i + 0.5;
 
-        for (int i = 0; i < n; i++)
-        {
-            fprintf(ferr, "%d %g %g\n", nocells, array[0][i], array[1][i]);
-        }
+        fprintf(ferr, "%.2e %.2e\n", array[0][i], array[1][i]);
     }
 }
