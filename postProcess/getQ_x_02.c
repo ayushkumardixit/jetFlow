@@ -2,8 +2,9 @@
 #include "navier-stokes/centered.h"
 
 char filename[80];
-int n = 40;
-double array[2][40] = {0};
+const int n = 80;
+double delta_get = 0.5 * 40 / n;
+double array[2][n] = {0};
 
 int main(int a, char const *arguments[])
 {
@@ -14,9 +15,9 @@ int main(int a, char const *arguments[])
     {
         for (int j = 0; j < n; j++)
         {
-            array[1][i] += 2 * pi * (j + 0.5) * interpolate(u.x, i + 0.5, j + 0.5);
+            array[1][i] += 2 * pi * (j + delta_get) * interpolate(u.x, i + delta_get, j + delta_get);
         }
-        array[0][i] = i + 0.5;
+        array[0][i] = i + delta_get;
 
         fprintf(ferr, "%.2e %.2e\n", array[0][i], array[1][i]);
     }
