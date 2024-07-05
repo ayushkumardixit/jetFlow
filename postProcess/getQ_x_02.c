@@ -14,7 +14,7 @@ int main(int a, char const *arguments[])
     {
         for (int j = 0; j < n; j++)
         {
-            array[1][i] += 2 * pi * y * 0.5 * interpolate(u.x, i + 0.5, j + 0.5);
+            array[1][i] += 2 * pi * (j + 0.5) * interpolate(u.x, i + 0.5, j + 0.5);
         }
         array[0][i] = i + 0.5;
 
