@@ -17,7 +17,7 @@ int main(int a, char const *arguments[])
         {
             if (x < (i + 1) && x > i)
             {
-                array[1][i] += rho[] * 2 * pi * y * Delta * u.x[] * Delta;
+                array[1][i] +=  2 * pi * y * Delta * u.x[];
             }
         }
     }
